@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фанфик Генератор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Фанфик Генератор</h1>
+    <p class="subtitle">Ты можешь создать фанфики с любым из этих этих людей</p>
+
+    <div class="character-list">
+        <div class="character" onclick="selectCharacter('Сергеич')">
+            <img src="sckilka/sergeich.jpg" alt="Сергеич">
+            <p>Сергеич</p>
+        </div>
+        <div class="character" onclick="selectCharacter('Коля Вендин')">
+            <img src="sckilka/vendin.jpg" alt="Коля Вендин">
+            <p>Коля Вендин</p>
+        </div>
+        <div class="character" onclick="selectCharacter('Скрыган')">
+            <img src="sckilka/eblan.jpg" alt="Скрыган">
+            <p>Скрыган</p>
+        </div>
+    </div>
+
+    <div class="selection-status" id="selection-status">
+        Выбрано: 0/2
+    </div>
+
+    <button id="continue-btn" onclick="goToSettings()" disabled>Продолжить</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
