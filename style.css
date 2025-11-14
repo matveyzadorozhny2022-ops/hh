@@ -10,18 +10,22 @@ body {
 /* Телефон */
 #intro {
   width: 100%;
-  height: 95vh;
+  height: 85vh; /* было 95vh */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Прижали телефон к самому верху */
   justify-content: center;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 #phone {
   width: 70%;
   max-width: 330px;
+  margin-top: 0; /* Убрали возможный отступ */
+  padding-top: 0;
   opacity: 0;
   transform: translateZ(0);
-  animation: appear 1.8s ease-out forwards;
+  animation: appear 1.2s ease-out forwards; /* ускорили */
 }
 
 @keyframes appear {
@@ -40,7 +44,7 @@ body {
   100% { transform: scale(0.35) translateY(-100vh); opacity: 0; }
 }
 
-/* Контент появляется */
+/* Плавное появление контента */
 #content * {
   opacity: 0;
   transform: translateY(25px);
@@ -58,10 +62,11 @@ body {
 /* Рамка текста */
 .glass-box {
   margin: 0 auto;
-  margin-top: -40px;
+  margin-top: -20px; /* подняли описание выше */
   max-width: 350px;
-  font-size: 1.05rem;
-  padding: 14px;
+  font-size: 1.2rem; /* увеличили текст */
+  line-height: 1.45;
+  padding: 16px;
   color: rgba(255,255,255,0.55);
   background: rgba(255,255,255,0.04);
   border-radius: 16px;
@@ -77,7 +82,7 @@ body {
 
 /* ТАП-КНОПКА — по центру */
 #gift {
-  margin-top: 40px;
+  margin-top: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -91,17 +96,6 @@ body {
   border-radius: 18px;
   transition: transform 0.15s ease;
   transform: translateZ(0);
-}
-
-/* Красивое уменьшение → увеличение */
-.tap-press {
-  animation: tapPress 0.22s ease-out forwards;
-}
-
-@keyframes tapPress {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.86); }
-  100% { transform: scale(1); }
 }
 
 /* Счетчик */
@@ -162,7 +156,7 @@ footer {
 /* Мобилки */
 @media (max-width: 480px) {
   #phone { width: 80%; }
-  .glass-box { font-size: 0.95rem; }
+  .glass-box { font-size: 1.1rem; }
   #tapBtn { width: 85%; }
   .btn { font-size: 1.05rem; }
 }
