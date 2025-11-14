@@ -18,7 +18,7 @@ setTimeout(() => {
     });
   }, 200);
 
-}, 1200); // ← было 2000ms, теперь 1200ms
+}, 1200); // было 2000ms → теперь 1.2s
 
 
 // === ТАП-МЕХАНИКА ===
@@ -26,12 +26,10 @@ let isPressing = false;
 
 tapBtn.addEventListener('click', () => {
 
-  // предотвращение перегрузки анимации
+  // красивая анимация уменьшения/увеличения без накопления
   if (!isPressing) {
     isPressing = true;
-    tapBtn.style.transition = "transform 0.15s ease";
     tapBtn.style.transform = "scale(0.85)";
-
     setTimeout(() => {
       tapBtn.style.transform = "scale(1)";
       isPressing = false;
