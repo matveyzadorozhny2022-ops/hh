@@ -10,22 +10,21 @@ body {
 /* Телефон */
 #intro {
   width: 100%;
-  height: 85vh; /* было 95vh */
+  height: 80vh; /* ближе кверху */
   display: flex;
-  align-items: flex-start; /* Прижали телефон к самому верху */
+  align-items: flex-start;
   justify-content: center;
   padding-top: 0;
-  margin-top: 0;
+  margin-top: -15px; /* убрали ещё 15px */
 }
 
 #phone {
   width: 70%;
   max-width: 330px;
-  margin-top: 0; /* Убрали возможный отступ */
+  margin-top: 0;
   padding-top: 0;
   opacity: 0;
-  transform: translateZ(0);
-  animation: appear 1.2s ease-out forwards; /* ускорили */
+  animation: appear 1.2s ease-out forwards;
 }
 
 @keyframes appear {
@@ -33,7 +32,7 @@ body {
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* Улет вверх + уменьшение */
+/* Улетание телефона */
 .shrink-up {
   animation: shrinkUp 1s cubic-bezier(.4,0,.2,1) forwards;
 }
@@ -44,7 +43,7 @@ body {
   100% { transform: scale(0.35) translateY(-100vh); opacity: 0; }
 }
 
-/* Плавное появление контента */
+/* Появление контента */
 #content * {
   opacity: 0;
   transform: translateY(25px);
@@ -59,12 +58,12 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Рамка текста */
+/* Описание */
 .glass-box {
   margin: 0 auto;
-  margin-top: -20px; /* подняли описание выше */
+  margin-top: -20px;
   max-width: 350px;
-  font-size: 1.2rem; /* увеличили текст */
+  font-size: 1.2rem; /* увеличено */
   line-height: 1.45;
   padding: 16px;
   color: rgba(255,255,255,0.55);
@@ -80,7 +79,7 @@ body {
   font-weight: 900;
 }
 
-/* ТАП-КНОПКА — по центру */
+/* ТАП-кнопка */
 #gift {
   margin-top: 30px;
   width: 100%;
@@ -98,7 +97,7 @@ body {
   transform: translateZ(0);
 }
 
-/* Счетчик */
+/* Счётчик */
 #tapCounter {
   margin-top: 8px;
   font-size: 1.3rem;
@@ -133,7 +132,7 @@ body {
   transform: scale(0.95);
 }
 
-/* Анимация появления подарка */
+/* Анимация подарка */
 .gift-animate {
   animation: giftReveal 0.6s cubic-bezier(.4,0,.2,1) forwards;
 }
